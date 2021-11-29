@@ -99,58 +99,58 @@ stories:
     - is_flag: yes
   - action: utter_happy
 
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: vocab
-    entities:
-    - vocab_word: brutal
-  - slot_was_set:
-    - vocab_word: brutal
-  - action: action_meaning
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: no
-  - action: action_next
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: yes
-  - action: utter_happy
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: vocab
+#     entities:
+#     - vocab_word: brutal
+#   - slot_was_set:
+#     - vocab_word: brutal
+#   - action: action_meaning
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: no
+#   - action: action_next
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: yes
+#   - action: utter_happy
 
-- story: interactive_story_3
-  steps:
-  - intent: vocab
-    entities:
-    - vocab_word: love
-  - slot_was_set:
-    - vocab_word: love
-  - action: action_meaning
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: no
-  - action: action_next
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: yes
-  - action: utter_happy
+# - story: interactive_story_3
+#   steps:
+#   - intent: vocab
+#     entities:
+#     - vocab_word: love
+#   - slot_was_set:
+#     - vocab_word: love
+#   - action: action_meaning
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: no
+#   - action: action_next
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: yes
+#   - action: utter_happy
 
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: vocab
-    entities:
-    - vocab_word: love
-  - slot_was_set:
-    - vocab_word: love
-  - action: action_meaning
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: yes
-  - action: utter_happy
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: vocab
+#     entities:
+#     - vocab_word: love
+#   - slot_was_set:
+#     - vocab_word: love
+#   - action: action_meaning
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: yes
+#   - action: utter_happy

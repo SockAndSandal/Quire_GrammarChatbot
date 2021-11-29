@@ -171,6 +171,7 @@ nlu:
     - what does love mean?
     - what is the meaning of [love](vocab_word)?
     - what is the meaning of [love](vocab_word)
+    - what is the meaning of [sentence](vocab_word)
 - intent: rhymes
   examples: |
     - What rhymes with [bowl](rhyme_word)?
@@ -306,5 +307,6 @@ nlu:
 - intent: respond
   examples: |
     - [yes](is_flag)
+    - [no](is_flag)
     - [no](is_flag)
     - [yes](is_flag)
