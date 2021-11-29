@@ -1,0 +1,145 @@
+version: '3.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true
+intents:
+- greet
+- use_word_in_sentence
+- respond
+- mood_great
+- mood_unhappy
+- goodbye
+- intro
+- bot_challenge
+- out_of_scope
+- joke
+- word_of_the_day
+- name_explain
+- say_name
+- vocab
+- synonyms
+- rhymes
+- opposites
+entities:
+- example_word
+- is_flag
+- name
+- opposite_word
+- rhyme_word
+- synonym_word
+- vocab_word
+slots:
+  name:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: name
+  vocab_word:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: vocab_word
+      intent: vocab
+  rhyme_word:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: rhyme_word
+      intent: rhymes
+  opposite_word:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: opposite_word
+      intent: opposites
+  synonym_word:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: synonym_word
+      intent: synonym
+  example_word:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: example_word
+      intent: use_word_in_sentence
+  is_flag:
+    type: categorical
+    influence_conversation: true
+    mappings:
+    - type: from_entity
+      entity: is_flag
+      intent: respond
+      conditions:
+      - active_loop: example_form
+        requested_slot: is_flag
+    values:
+    - yes
+    - no
+responses:
+  utter_greet:
+  - text: Hey! My name's Quire.
+  - text: Greetings!
+  utter_cheer_up:
+  - image: https://i.imgur.com/nGF1K8f.jpg
+    text: 'Here is something to cheer you up:'
+  utter_did_that_help:
+  - text: Was that helpful?
+  - text: Did that answer your question?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  - text: Bye, have a good day!
+  - text: Until next time.
+  utter_please_rephrase:
+  - text: Can you please rephrase that for me?
+  - text: Say that again in different words.
+  - text: I didn't quite understand. You might want to repeat that.
+  - text: Are you sure you didn't make a typo? Try typing that again.
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa. (But don't tell anyone.)
+  utter_out_of_scope:
+  - text: I have no idea how to answer that. I can tell if you need an oxford comma though.
+  utter_joke:
+  - text: What do you call Santa’s little helpers? Subordinate Clauses!
+  - text: I invented a new word! It's called plagiarism.
+  - text: Never leave alphabet soup on the stove and then go out. It could spell disaster.
+  utter_word_of_the_day:
+  - text: Here's your word of the day. [Click here to find out more.](https://www.merriam-webster.com/word-of-the-day)
+  utter_name_explain:
+  - text: Quire refers to a collection of 24 or sometimes 25 sheets of paper of the same size and quality. It is also one twentieth of a ream. I'm named Quire because it's an interesting little word lost over centuries, and yet a part of our ever-growing lexicon. Besides, the alternative options were Yarborough and Adolf.
+  utter_intro:
+  - text: My name's Quire, and I'm a bot who can fix your quibbles with the English language.
+  - text: I'm Quire, nice to meet you. If you have a question about the English language, go right ahead.
+  utter_say_name:
+  - text: Hi {name}!
+  - text: Nice to meet you, {name}!
+  - text: Glad to have made your acquaintance, {name}.
+actions:
+- action_antonym
+- action_meaning
+- action_next
+- action_rhyming
+- action_synonym
+- action_use_in_sentence
+- respond
+- utter_did_that_help
+- utter_greet
+- utter_happy
+- utter_submit
+forms:
+  example_form:
+    ignored_intents:
+    - intro
+    - greet
+    required_slots:
+    - example_word
+    - is_flag

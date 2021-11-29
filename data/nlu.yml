@@ -1,0 +1,307 @@
+version: "3.0"
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+- intent: say_name
+  examples: |
+    - My name is [Bob](name)
+    - My name is [Arjun](name)
+    - My name is [Aman](name)
+    - My name is [Jorjeta](name)
+    - My name is [Surya](name)
+    - My name is [Jordan](name)
+    - My name is [Archit](name)
+    - My name is [Aryan](name)
+    - You can call me [Lindsey](name)
+    - You can call me [Tom](name)
+    - You can call me [Disha](name)
+    - You can call me [Karan](name)
+    - You can call me [Dee](name)
+    - You can call me [Megan](name)
+    - You can call me [Billie](name)
+    - You can call me [Phineas](name)
+    - You can call me [Ferb](name)
+    - I am [Erik](name)
+    - I'm [Ursula](name)
+    - I'm [Phoebe](name)
+    - I'm [Monica](name)
+    - I'm [Barney](name)
+    - I'm [Ted](name)
+    - I'm [Lily](name)
+    - I'm [Charlie](name)
+    - I'm [Patrick](name)
+    - I'm [Denton](name)
+    - I'm [Jack](name)
+    - I'm [Lee](name)
+    - I'm [Cory](name)
+    - Call me [Joe](name)
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+- intent: intro
+  examples: |
+    - who are you?
+    - introduce yourself
+    - what is your name?
+    - what do you do
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+- intent: out_of_scope
+  examples: |
+    - I want to order food
+    - Turn off the lights
+    - What is 2 + 2?
+- intent: joke
+  examples: |
+    - Tell me a joke
+    - Tell me a jobke
+    - Tickle my funny bone
+    - Give me your best joke
+- intent: word_of_the_day
+  examples: |
+    - What's the word of the day?
+    - Tell me a new random word
+    - What's the word for today?
+- intent: name_explain
+  examples: |
+    - Why is your name Quire?
+    - why are you named that
+- intent: vocab
+  examples: |
+    - What is the meaning of the word [moisture](vocab_word)?
+    - What is the meaning of [umbrella](vocab_word)
+    - What is the meaning of the word [driver](vocab_word)?
+    - What is the meaning of [core](vocab_word)
+    - What is the meaning of the word [raincoat](vocab_word)?
+    - What is the meaning of [scarecrow](vocab_word)
+    - What is the meaning of the word [grass](vocab_word)?
+    - What is the meaning of [blind](vocab_word)
+    - What is the meaning of the word [jazz](vocab_word)?
+    - What is the meaning of [funky](vocab_word)
+    - What is the meaning of [tomorrow](vocab_word)
+    - What is the meaning of [dictionary](vocab_word)
+    - What is the meaning of [intentional](vocab_word)
+    - What is the meaning of [rusticate](vocab_word)
+    - What is the meaning of [harrowing](vocab_word)
+    - What is the meaning of [entrust](vocab_word)
+    - What is the meaning of [perusal](vocab_word)
+    - What is the meaning of [maledict](vocab_word)
+    - What is the meaning of [exacerbate](vocab_word)?
+    - What is the meaning of [artillery](vocab_word)
+    - What does [condo](vocab_word) mean?
+    - What does [lint](vocab_word) mean?
+    - What does [denim](vocab_word) mean?
+    - What does [corduroy](vocab_word) mean?
+    - What does [assembly](vocab_word) mean?
+    - What does [arsenal](vocab_word) mean?
+    - What does [entrust](vocab_word) mean?
+    - What does [perusal](vocab_word) mean?
+    - What does [raincoat](vocab_word) mean?
+    - What does [turncoat](vocab_word) mean?
+    - What does [leather](vocab_word) mean?
+    - What does [america](vocab_word) mean?
+    - What does [voltage](vocab_word) mean?
+    - What does [symbolism](vocab_word) mean?
+    - What does [onomatopoeia](vocab_word) mean
+    - Give me the definition of [rugged](vocab_word)
+    - what is the meaning of [insert](vocab_word)?
+    - what's the meaning of the word [insert](vocab_word)
+    - what is the meaning of the word [moist](vocab_word)?
+- intent: rhymes
+  examples: |
+    - What rhymes with [bowl](rhyme_word)?
+    - What word rhymes with [bellow](rhyme_word)?
+    - What word rhymes with the word [stupid](rhyme_word)
+    - What word rhymes with the word [term](rhyme_word)
+    - What word rhymes with the word [artificial](rhyme_word)
+    - What word rhymes with the word [dibs](rhyme_word)
+    - What word rhymes with the word [quantum](rhyme_word)
+    - What word rhymes with the word [daycare](rhyme_word)
+    - Give me something that rhymes with [mouth](rhyme_word)
+    - Give me something that rhymes with [earth](rhyme_word)
+    - Give me something that rhymes with [embrace](rhyme_word)
+    - Give me something that rhymes with [detest](rhyme_word)
+    - Give me something that rhymes with [stressed](rhyme_word)
+    - Give me something that rhymes with [morning](rhyme_word)
+    - Give me something that rhymes with [star](rhyme_word)
+    - Give me something that rhymes with [strapped](rhyme_word)
+    - Give me something that rhymes with [ardent](rhyme_word)
+    - Give me something that rhymes with [denim](rhyme_word)
+    - Give me something that rhymes with [condo](rhyme_word)
+    - Give me something that rhymes with [orange](rhyme_word)
+    - Give me something that rhymes with [boring](rhyme_word)
+    - Give me something that rhymes with [lint](rhyme_word)
+    - Give me rhyming words for [orchid](rhyme_word)
+    - Give me rhyming words for [star](rhyme_word)
+    - Give me rhyming words for [arch](rhyme_word)
+    - Give me rhyming words for [master](rhyme_word)
+    - Give me rhyming words for [fester](rhyme_word)
+    - Give me rhyming words for [moist](rhyme_word)
+    - Give me rhyming words for [cup](rhyme_word)
+    - Give me rhyming words for [happiness](rhyme_word)
+    - Give me rhyming words for [chaotic](rhyme_word)
+    - Give me rhyming words for [family](rhyme_word)
+    - what is a word that rhymes with [bottom](rhyme_word)?
+    - what rhymes with [orange](rhyme_word)
+- intent: synonyms
+  examples: |
+    - What is the synonym of [family](synonym_word)
+    - What is the synonym of [heavy](synonym_word)
+    - What is the synonym of [absence](synonym_word)
+    - What is the synonym of [PEOPLE](synonym_word)
+    - What is the synonym of [wrestling](synonym_word)
+    - What is the synonym of [Acumen](synonym_word)
+    - What is the synonym of [account](synonym_word)
+    - Give me a word that's a synonym for [family](synonym_word)
+    - Give me a word that's a synonym for [easy](synonym_word)
+    - Give me a word that's a synonym for [cup](synonym_word)
+    - Give me a word that's a synonym for [heavy](synonym_word)
+    - Give me a word that's a synonym for [main](synonym_word)
+    - Give me a word that's a synonym for [reflection](synonym_word)
+    - Give me a word that's a synonym for [mirror](synonym_word)
+    - What's another word for [scissors](synonym_word)?
+    - give me a different word for [window](synonym_word)
+    - give me a different word for [door](synonym_word)
+    - give me a different word for [canine](synonym_word)
+    - give me a different word for [snake](synonym_word)
+    - give me a different word for [car](synonym_word)
+    - give me a different word for [locomotion](synonym_word)
+    - give me a different word for [master](synonym_word)
+    - give me a different word for [symbolism](synonym_word)
+    - what's the synonym of [microphone](synonym_word)?
+    - can you give me different words for [basket](synonym_word)?
+    - what's a word that's synonymous to [scarecrow](synonym_word)?
+    - what's a word that's synonymous to [umbrella](synonym_word)?
+    - what's a word that's synonymous to [orange](synonym_word)?
+    - what's a word that's synonymous to [acquire](synonym_word)?
+    - what's a word that's synonymous to [book](synonym_word)?
+    - what's a word that's synonymous to [mighty](synonym_word)?
+    - what's a word that's synonymous to [rugged](synonym_word)?
+    - what's a word that's synonymous to [arms](synonym_word)?
+    - i need a word that is synonymous to [look](synonym_word)
+- intent: opposites
+  examples: |
+    - What is the opposite of [family](opposite_word)
+    - What is the opposite of [heavy](opposite_word)
+    - What is the opposite of [absence](opposite_word)
+    - What is the opposite of [demon](opposite_word)
+    - What is the opposite of [person](opposite_word)
+    - What is the opposite of [wrestling](opposite_word)
+    - What is the opposite of [Acumen](opposite_word)
+    - What is the opposite of [account](opposite_word)
+    - Give me a word that's an antonym for [family](opposite_word)
+    - Give me a word that's an antonym for [easy](opposite_word)
+    - Give me a word that's an antonym for [cup](opposite_word)
+    - Give me a word that's an antonym for [heavy](opposite_word)
+    - Give me a word that's an antonym for [main](opposite_word)
+    - Give me a word that's an antonym for [reflection](opposite_word)
+    - Give me a word that's an antonym for [mirror](opposite_word)
+    - what's the antonym of [microphone](opposite_word)?
+    - can you tell me the opposite of [train](opposite_word)
+    - can you tell me the opposite of [arch](opposite_word)
+    - can you tell me the opposite of [ability](opposite_word)
+    - can you tell me the opposite of [interest](opposite_word)
+    - can you tell me the opposite of [rain](opposite_word)
+    - can you tell me the opposite of [stretch](opposite_word)
+    - can you tell me the opposite of [magical](opposite_word)
+    - can you tell me the opposite of [pragmatic](opposite_word)
+- intent: use_word_in_sentence
+  examples: |
+    - Use the word [harangue](example_word) in a sentence
+    - Use the word [pragmatic](example_word) in a sentence
+    - Use the word [real](example_word) in a sentence
+    - Use the word [orange](example_word) in a sentence
+    - Use the word [acumen](example_word) in a sentence
+    - Use the word [flabbergasted](example_word) in a sentence
+    - Use the word [amazing](example_word) in a sentence
+    - Use the word [artificial](example_word) in a sentence
+    - Use the word [stocks](example_word) in a sentence
+    - Use the word [trader](example_word) in a sentence
+    - Use the word [investment](example_word) in a sentence
+    - Use the word [messaging](example_word) in a sentence
+    - Use the word [argument](example_word) in a sentence
+    - Use the word [tirade](example_word) in a sentence
+    - Use [tirade](example_word) in a sentence
+    - Use [blind](example_word) in a sentence
+    - Use [blinds](example_word) in a sentence
+    - Use [garment](example_word) in a sentence
+    - Use [star](example_word) in a sentence
+    - Use [constellation](example_word) in a sentence
+    - Use [organising](example_word) in a sentence
+    - Use [kindle](example_word) in a sentence
+    - Use [steam](example_word) in a sentence
+    - Use [game](example_word) in a sentence
+    - Use [toxic](example_word) in a sentence
+    - Use [charger](example_word) in a sentence
+    - Use [power](example_word) in a sentence
+    - use the word [umbrella](example_word) in a sentence
+    - use the word [brutal](example_word) in a sentence
+    - use [major](example_word) in a sentence
+    - use the word [live](example_word) in a sentence
+    - use the word [strong](example_word) in a sentence
+    - use the word [strong](example_word) in a sentence
+- intent: respond
+  examples: |
+    - [yes](is_flag)
+    - [no](is_flag)
+    - [no](is_flag)
+    - [yes](is_flag)

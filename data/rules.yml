@@ -1,0 +1,82 @@
+version: "3.0"
+
+rules:
+
+- rule: Say hi
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Greet the user with their name
+  steps:
+  - intent: say_name
+  - action: utter_say_name
+
+- rule: Introduce yourself
+  steps:
+  - intent: intro
+  - action: utter_intro
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: out-of-scope stuff
+  steps:
+  - intent: out_of_scope
+  - action: utter_out_of_scope
+
+- rule: word of the day
+  steps:
+  - intent: word_of_the_day
+  - action: utter_word_of_the_day
+- rule: explain why it's named that
+  steps:
+  - intent: name_explain
+  - action: utter_name_explain
+  
+- rule: comedy
+  steps:
+  - intent: joke
+  - action: utter_joke
+
+- rule: vocabulary
+  steps:
+  - intent: vocab
+  - action: action_meaning
+
+- rule: rhyme
+  steps:
+  - intent: rhymes
+  - action: action_rhyming
+  
+# - rule: use word in sentence
+#   steps:
+#   - intent: use_word_in_sentence
+#   - action: action_use_in_sentence
+
+- rule: get synonyms
+  steps:
+  - intent: synonyms
+  - action: action_synonym
+
+- rule: get opposite of word
+  steps:
+  - intent: opposites
+  - action: action_antonym
+
+# - rule: Use word in sentence
+#   steps:
+#   - intent: use_word_in_sentence
+#   - action: action_use_in_sentence
+#   - action: utter_did_that_help
+
+# - rule: form stuff
+#   steps:
+#   - action: utter_did_that_help

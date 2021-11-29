@@ -127,3 +127,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Rasa
+.history
+rasa/segment_key
+rasa/keys
+.rasa
+rasa.db
+original_domain.yml
+/results/

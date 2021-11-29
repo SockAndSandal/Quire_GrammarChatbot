@@ -1,0 +1,100 @@
+version: "3.0"
+
+stories:
+
+- story: Tell meaning of word
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: vocab
+    entities:
+    - vocab_word
+  - slot_was_set:
+    - vocab_word: moist
+  - action: action_meaning
+- story: Give rhyming words
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: rhymes
+    entities:
+    - rhyme_word
+  - slot_was_set:
+    - rhyme_word: bellow
+  - action: action_rhyming
+- story: Give synonyms
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: synonyms
+    entities:
+    - synonym_word
+  - slot_was_set:
+    - synonym_word: interest
+  - action: action_synonym
+- story: Give antonyms
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: opposites
+    entities:
+    - opposite_word
+  - slot_was_set:
+    - opposite_word: brother
+  - action: action_antonym
+- story: use in sentence base
+  steps:
+  - intent: use_word_in_sentence
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - checkpoint: example_checkpoint
+
+- story: happy sentence
+  steps:
+  - checkpoint: example_checkpoint
+  - intent: respond
+  - slot_was_set:
+    - is_flag: true
+  - action: utter_happy
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: use_word_in_sentence
+    entities:
+    - example_word: strong
+  - slot_was_set:
+    - example_word: strong
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: yes
+  - action: utter_happy
+  
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: use_word_in_sentence
+    entities:
+    - example_word: strong
+  - slot_was_set:
+    - example_word: strong
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: no
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: no
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: yes
+  - action: utter_happy
