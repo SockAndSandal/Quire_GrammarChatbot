@@ -37,4 +37,4 @@
   **You**: What is the opposite of brother? \
   **Quire**: brother x sister 
 
-### BONUS: Ask Quire to tell you a joke. Or tell it your name, it will remember. 
+### BONUS: Ask Quire to tell you a joke. Or tell it your name, it will remember. You could also ask Quire why it is named that and it will tell you.
