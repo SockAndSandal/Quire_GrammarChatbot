@@ -24,8 +24,8 @@
 
 ### Ask Quire to tell you the meaning of a word.
   **You**: What does umbrella mean? \
-  **Quire**: Umbrella(noun): a device consisting of a circular canopy of cloth on a folding metal frame supported by a central rod, used as protection against rain or sometimes sun.
-  **Quire**: Was the helpful \
+  **Quire**: Umbrella(noun): a device consisting of a circular canopy of cloth on a folding metal frame supported by a central rod, used as protection against rain or sometimes sun. \
+  **Quire**: Was that helpful? \
   **You**: Yes \
   **Quire**: Great!
 
