@@ -1,5 +1,7 @@
 # Quire - A Chatbot that's built to point out your mistakes. Gramatically.
 
+##### _This chatbot is made on Rasa 3.0, so please make sure you have Rasa 3.0 installed on the env for proper functioning of this chatbot._
+
 ## Steps for Installation
 1. Clone this repo into a folder of your choosing.
 2. Make sure you have **Python** (`brew install python`), **Rasa** (`pip install rasa[full]`), and **Keras Tensorflow** installed (`pip install tensorflow`)
