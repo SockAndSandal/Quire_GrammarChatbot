@@ -166,6 +166,11 @@ nlu:
     - what is the meaning of [insert](vocab_word)?
     - what's the meaning of the word [insert](vocab_word)
     - what is the meaning of the word [moist](vocab_word)?
+    - what is the meaning of the word [brutal](vocab_word)?
+    - what is the meaning of the word [microphone](opposite_word)
+    - what does love mean?
+    - what is the meaning of [love](vocab_word)?
+    - what is the meaning of [love](vocab_word)
 - intent: rhymes
   examples: |
     - What rhymes with [bowl](rhyme_word)?
@@ -298,10 +303,8 @@ nlu:
     - use [major](example_word) in a sentence
     - use the word [live](example_word) in a sentence
     - use the word [strong](example_word) in a sentence
-    - use the word [strong](example_word) in a sentence
 - intent: respond
   examples: |
     - [yes](is_flag)
-    - [no](is_flag)
     - [no](is_flag)
     - [yes](is_flag)

@@ -41,9 +41,37 @@ class ActionMeaning(Action):
             part_of_speech = data["definitions"][0]["partOfSpeech"]
         except:
             meaning = "Sorry, I don't know the meaning of this word"
-            # part_of_speech = "Sorry, I don't know the part of speech of this word"
         dispatcher.utter_message(text="{}({}): {}".format(word,part_of_speech, meaning))
         # dispatcher.utter_message(text="it's a word.")
+        return []
+
+class ActionNext(Action):
+    def name(self) -> Text:
+        return "action_next"
+    
+    def run(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
+        word = str(tracker.get_slot("vocab_word"))
+        url = "https://wordsapiv1.p.rapidapi.com/words/{}/definitions"
+        headers = {
+            'x-rapidapi-host': "wordsapiv1.p.rapidapi.com",
+            'x-rapidapi-key': "d30f9a963emsh9ffccbff179bbe1p1248b0jsn1f93f83e8fa0"
+            }
+        response = requests.request("GET", url.format(word), headers=headers)
+        data = response.json()
+        try:
+            if(len(data['definitions'])<2):
+                meaning = "Sorry, there's no other meanings to this word."
+                dispatcher.utter_message(text={}.format(meaning))
+            else:
+                rl = random.choice(data["definitions"])
+                meaning = rl["definition"]
+                part_of_speech = rl["partOfSpeech"]
+                dispatcher.utter_message(text="{}({}): {}".format(word,part_of_speech, meaning))
+        except:
+            meaning = "Sorry, I don't know the meaning of this word"
+            dispatcher.utter_message(text={}.format(meaning))
         return []
 
 
@@ -118,26 +146,6 @@ class ActionAntonym(Action):
 class ActionUseInSentence(Action):
     def name(self) -> Text:
         return "action_use_in_sentence"
-    
-    def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
-        word = str(tracker.get_slot("example_word"))
-        url = "https://wordsapiv1.p.rapidapi.com/words/{}/examples"
-        headers = {
-            'x-rapidapi-host': "wordsapiv1.p.rapidapi.com",
-            'x-rapidapi-key': "d30f9a963emsh9ffccbff179bbe1p1248b0jsn1f93f83e8fa0"
-        }
-        response = requests.request("GET", url.format(word), headers=headers)
-        data = response.json()
-        rl = data['examples']
-        try:
-            dispatcher.utter_message(text="{}".format(random.choice(rl)))
-        except:
-            dispatcher.utter_message(text="Sorry, I don't know how to use this in a sentence either.")
-        return []
-
-class ActionNext(Action):
-    def name(self) -> Text:
-        return "action_next"
     
     def run(self, dispatcher: CollectingDispatcher, tracker: Tracker, domain: Dict[Text, Any]) -> List[Dict[Text, Any]]:
         word = str(tracker.get_slot("example_word"))

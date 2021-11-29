@@ -46,10 +46,10 @@ rules:
   - intent: joke
   - action: utter_joke
 
-- rule: vocabulary
-  steps:
-  - intent: vocab
-  - action: action_meaning
+# - rule: vocabulary
+#   steps:
+#   - intent: vocab
+#   - action: action_meaning
 
 - rule: rhyme
   steps:
