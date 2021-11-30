@@ -1,5 +1,7 @@
 # Quire - A Chatbot that's built to point out your mistakes. Gramatically.
 
+##### _This chatbot is made on Rasa 3.0, so please make sure you have Rasa 3.0 installed on the env for proper functioning of this chatbot._
+
 ## Steps for Installation
 1. Clone this repo into a folder of your choosing.
 2. Make sure you have **Python** (`brew install python`), **Rasa** (`pip install rasa[full]`), and **Keras Tensorflow** installed (`pip install tensorflow`)
@@ -24,7 +26,7 @@
 
 ### Ask Quire to tell you the meaning of a word.
   **You**: What does umbrella mean? \
-  **Quire**: Umbrella(noun): a device consisting of a circular canopy of cloth on a folding metal frame supported by a central rod, used as protection against rain or sometimes sun. \
+  **Quire**: Umbrella(noun): a device consisting of a circular canopy of cloth on a folding metal frame supported by a central rod, used as protection against rain or sometimes sun. 
 
 ### Ask Quire to tell you to rhyming words for a word.
   **You**: Give me rhyming words for old. \
@@ -35,4 +37,4 @@
   **You**: What is the opposite of brother? \
   **Quire**: brother x sister 
 
-### BONUS: Ask Quire to tell you a joke. Or tell it your name, it will remember. 
+### BONUS: Ask Quire to tell you a joke. Or tell it your name, it will remember. You could also ask Quire why it is named that and it will tell you.
