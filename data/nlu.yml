@@ -136,12 +136,17 @@ nlu:
     - What is the meaning of the word [grass](vocab_word)?
     - What is the meaning of [blind](vocab_word)
     - What is the meaning of the word [jazz](vocab_word)?
+    - What is the meaning of the word [four](vocab_word)?
+    - What is the meaning of the word [for](vocab_word)?
+    - What is the meaning of the word [keyboard](vocab_word)?
+    - What is the meaning of the word [whiteboard](vocab_word)?
     - What is the meaning of [funky](vocab_word)
     - What is the meaning of [tomorrow](vocab_word)
     - What is the meaning of [dictionary](vocab_word)
     - What is the meaning of [intentional](vocab_word)
     - What is the meaning of [rusticate](vocab_word)
     - What is the meaning of [harrowing](vocab_word)
+    - What is the meaning of [whiteboard](vocab_word)
     - What is the meaning of [entrust](vocab_word)
     - What is the meaning of [perusal](vocab_word)
     - What is the meaning of [maledict](vocab_word)
@@ -163,6 +168,9 @@ nlu:
     - What does [symbolism](vocab_word) mean?
     - What does [onomatopoeia](vocab_word) mean
     - Give me the definition of [rugged](vocab_word)
+    - Give me the definition of [whiteboard](vocab_word)
+    - Give me the definition of [understand](vocab_word)
+    - Give me the definition of [keyboard](vocab_word)
     - what is the meaning of [insert](vocab_word)?
     - what's the meaning of the word [insert](vocab_word)
     - what is the meaning of the word [moist](vocab_word)?
@@ -283,7 +291,11 @@ nlu:
     - Use the word [stocks](example_word) in a sentence
     - Use the word [trader](example_word) in a sentence
     - Use the word [investment](example_word) in a sentence
-    - Use the word [messaging](example_word) in a sentence
+    - Use the word [keyboard](example_word) in a sentence
+    - Use the word [whiteboard](example_word) in a sentence
+    - Use the word [carry](example_word) in a sentence
+    - Use the word [for](example_word) in a sentence
+    - Use the word [four](example_word) in a sentence
     - Use the word [argument](example_word) in a sentence
     - Use the word [tirade](example_word) in a sentence
     - Use [tirade](example_word) in a sentence
@@ -304,9 +316,12 @@ nlu:
     - use [major](example_word) in a sentence
     - use the word [live](example_word) in a sentence
     - use the word [strong](example_word) in a sentence
+    - use the word [argue](example_word) in a sentence
+    - use the word [strong](example_word) in a sentence
+    - use the word [understand](example_word) in a sentence
 - intent: respond
   examples: |
     - [yes](is_flag)
     - [no](is_flag)
-    - [no](is_flag)
-    - [yes](is_flag)
+    - [Yes](is_flag)
+    - [No](is_flag)

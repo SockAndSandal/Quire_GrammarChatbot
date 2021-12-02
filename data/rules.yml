@@ -80,3 +80,11 @@ rules:
 # - rule: form stuff
 #   steps:
 #   - action: utter_did_that_help
+
+# - rule: stop at yes
+#   steps:
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: yes
+#   - action: utter_happy

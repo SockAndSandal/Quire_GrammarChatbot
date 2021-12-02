@@ -57,47 +57,47 @@ stories:
     - is_flag: true
   - action: utter_happy
 
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: use_word_in_sentence
-    entities:
-    - example_word: strong
-  - slot_was_set:
-    - example_word: strong
-  - action: action_use_in_sentence
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: yes
-  - action: utter_happy
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: use_word_in_sentence
+#     entities:
+#     - example_word: strong
+#   - slot_was_set:
+#     - example_word: strong
+#   - action: action_use_in_sentence
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: yes
+#   - action: utter_happy
 
-- story: interactive_story_1
-  steps:
-  - intent: greet
-  - action: utter_greet
-  - intent: use_word_in_sentence
-    entities:
-    - example_word: strong
-  - slot_was_set:
-    - example_word: strong
-  - action: action_use_in_sentence
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: no
-  - action: action_use_in_sentence
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: no
-  - action: action_use_in_sentence
-  - action: utter_did_that_help
-  - intent: respond
-    entities:
-    - is_flag: yes
-  - action: utter_happy
+# - story: interactive_story_1
+#   steps:
+#   - intent: greet
+#   - action: utter_greet
+#   - intent: use_word_in_sentence
+#     entities:
+#     - example_word: strong
+#   - slot_was_set:
+#     - example_word: strong
+#   - action: action_use_in_sentence
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: no
+#   - action: action_use_in_sentence
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: no
+#   - action: action_use_in_sentence
+#   - action: utter_did_that_help
+#   - intent: respond
+#     entities:
+#     - is_flag: yes
+#   - action: utter_happy
 
 # - story: interactive_story_1
 #   steps:
@@ -154,3 +154,66 @@ stories:
 #     entities:
 #     - is_flag: yes
 #   - action: utter_happy
+
+- story: interactive_story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: use_word_in_sentence
+    entities:
+    - example_word: argue
+  - slot_was_set:
+    - example_word: argue
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: yes
+  - action: utter_happy
+
+- story: interactive_story_2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: use_word_in_sentence
+    entities:
+    - example_word: strong
+  - slot_was_set:
+    - example_word: strong
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: no
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: yes
+  - action: utter_happy
+
+- story: interactive_story_3
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: use_word_in_sentence
+    entities:
+    - example_word: understand
+  - slot_was_set:
+    - example_word: understand
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: no
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: no
+  - action: action_use_in_sentence
+  - action: utter_did_that_help
+  - intent: respond
+    entities:
+    - is_flag: yes
+  - action: utter_happy
