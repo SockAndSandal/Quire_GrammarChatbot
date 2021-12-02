@@ -42,5 +42,5 @@
 
 ### Current Issues:
 
-1. Quire doesn't take very well to typos in the words themselves. It might understand when you say "what is the oposite of brother" but is much less likely to understand or give you the right response if you spell "brother" wrong. This has got to do with the fact that the words are the literal queries that feed as input to our API and it doesn't take very well to typos.
+1. Quire doesn't take very well to typos in the words themselves. It might understand when you say "what is the oposite of brother" but is much less likely to understand or give you the right response if you spell "brother" wrong. This has got to do with the fact that the words are the literal queries that feed as input to our API and the API doesn't take very well to typos.
 2. While Quire is good at slot mapping for a large variety of words, whether that is for meanings of words or using in sentences, it can fail at mapping the correct word to the slots when it encounters words that are very different from what it's been trained for. While it is easy to mitigate this issue using a form format where I turn this into a multi-turn conversation and ask to input the word in a different sentence, I don't think that is a natural way to interact with a chatbot in the real world. 
