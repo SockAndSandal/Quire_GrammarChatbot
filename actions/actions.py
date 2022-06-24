@@ -5,6 +5,8 @@ from rasa_sdk.executor import CollectingDispatcher
 from rasa_sdk.events import SlotSet
 # from rasa_sdk.forms import FormAction
 
+from actions import config
+
 import requests
 import random
 
@@ -32,7 +34,7 @@ class ActionMeaning(Action):
         url = "https://wordsapiv1.p.rapidapi.com/words/{}/definitions"
         headers = {
             'x-rapidapi-host': "wordsapiv1.p.rapidapi.com",
-            'x-rapidapi-key': "d30f9a963emsh9ffccbff179bbe1p1248b0jsn1f93f83e8fa0"
+            'x-rapidapi-key': config.api_key
             }
         response = requests.request("GET", url.format(word), headers=headers)
         data = response.json()
@@ -56,7 +58,7 @@ class ActionNext(Action):
         url = "https://wordsapiv1.p.rapidapi.com/words/{}/definitions"
         headers = {
             'x-rapidapi-host': "wordsapiv1.p.rapidapi.com",
-            'x-rapidapi-key': "d30f9a963emsh9ffccbff179bbe1p1248b0jsn1f93f83e8fa0"
+            'x-rapidapi-key': config.api_key
             }
         response = requests.request("GET", url.format(word), headers=headers)
         data = response.json()
@@ -87,7 +89,7 @@ class ActionRhyming(Action):
 
         headers = {
             'x-rapidapi-host': "wordsapiv1.p.rapidapi.com",
-            'x-rapidapi-key': "d30f9a963emsh9ffccbff179bbe1p1248b0jsn1f93f83e8fa0"
+            'x-rapidapi-key': config.api_key
         }
         response = requests.request("GET", url.format(word), headers=headers)
         data = response.json()
@@ -118,7 +120,7 @@ class ActionSynonym(Action):
         url = "https://wordsapiv1.p.rapidapi.com/words/{}/synonyms"
         headers = {
             'x-rapidapi-host': "wordsapiv1.p.rapidapi.com",
-            'x-rapidapi-key': "d30f9a963emsh9ffccbff179bbe1p1248b0jsn1f93f83e8fa0"
+            'x-rapidapi-key': config.api_key
         }
         response = requests.request("GET", url.format(word), headers=headers)
         data = response.json()
@@ -137,7 +139,7 @@ class ActionAntonym(Action):
         url = "https://wordsapiv1.p.rapidapi.com/words/{}/antonyms"
         headers = {
             'x-rapidapi-host': "wordsapiv1.p.rapidapi.com",
-            'x-rapidapi-key': "d30f9a963emsh9ffccbff179bbe1p1248b0jsn1f93f83e8fa0"
+            'x-rapidapi-key': config.api_key
         }
         response = requests.request("GET", url.format(word), headers=headers)
         data = response.json()
@@ -152,7 +154,7 @@ class ActionUseInSentence(Action):
         url = "https://wordsapiv1.p.rapidapi.com/words/{}/examples"
         headers = {
             'x-rapidapi-host': "wordsapiv1.p.rapidapi.com",
-            'x-rapidapi-key': "d30f9a963emsh9ffccbff179bbe1p1248b0jsn1f93f83e8fa0"
+            'x-rapidapi-key': config.api_key
         }
         response = requests.request("GET", url.format(word), headers=headers)
         data = response.json()

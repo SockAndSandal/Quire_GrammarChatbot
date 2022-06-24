@@ -100,11 +100,15 @@ responses:
   - text: Bye
   - text: Bye, have a good day!
   - text: Until next time.
+  
+  
   utter_please_rephrase:
   - text: Can you please rephrase that for me?
   - text: Say that again in different words.
   - text: I didn't quite understand. You might want to repeat that.
   - text: Are you sure you didn't make a typo? Try typing that again.
+
+
   utter_iamabot:
   - text: I am a bot, powered by Rasa. (But don't tell anyone.)
   utter_out_of_scope:
