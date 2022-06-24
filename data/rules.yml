@@ -55,11 +55,6 @@ rules:
   steps:
   - intent: rhymes
   - action: action_rhyming
-  
-# - rule: use word in sentence
-#   steps:
-#   - intent: use_word_in_sentence
-#   - action: action_use_in_sentence
 
 - rule: get synonyms
   steps:
@@ -71,20 +66,7 @@ rules:
   - intent: opposites
   - action: action_antonym
 
-# - rule: Use word in sentence
-#   steps:
-#   - intent: use_word_in_sentence
-#   - action: action_use_in_sentence
-#   - action: utter_did_that_help
-
-# - rule: form stuff
-#   steps:
-#   - action: utter_did_that_help
-
-# - rule: stop at yes
-#   steps:
-#   - action: utter_did_that_help
-#   - intent: respond
-#     entities:
-#     - is_flag: yes
-#   - action: utter_happy
+- rule: Ask the user to rephrase whenever they send a message with low NLU confidence
+  steps:
+  - intent: nlu_fallback
+  - action: utter_please_rephrase

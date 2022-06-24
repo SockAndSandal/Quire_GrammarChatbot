@@ -99,6 +99,14 @@ nlu:
     - introduce yourself
     - what is your name?
     - what do you do
+- intent: confusion
+  examples: |
+    - what
+    - i dont understand
+    - wha
+    - ???
+    - can you say that again
+    - i dont get it
 - intent: bot_challenge
   examples: |
     - are you a bot?
