@@ -4,11 +4,13 @@
 
 ## Steps for Installation
 1. Clone this repo into a folder of your choosing.
-2. Make sure you have **Python** (`brew install python`), **Rasa** (`pip install rasa[full]`), and **Keras Tensorflow** installed (`pip install tensorflow`)
+2. Make sure you have **Python** (`brew install python`), **Rasa** (`pip install rasa==3.0), and **Keras Tensorflow** installed (`pip install tensorflow`)
 3. Alternatively, you can also use the requirements folder in the repo to install everything you need.
 4. Navigate (`cd`) to the cloned repository.
 5. Start the action server with `rasa run actions` and leave this running in a terminal window.
 6. Open a new terminal window and run `rasa shell`
+
+Note: If installing Rasa 3.0 gives you dependency errors, Rasa 3.1 or 3.2 will also work for running this chatbot.
 
 ## Suggested Conversation Flows
 
