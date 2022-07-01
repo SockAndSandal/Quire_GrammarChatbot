@@ -4,7 +4,7 @@
 
 ## Steps for Installation
 1. Clone this repo into a folder of your choosing.
-2. Make sure you have **Python** (`brew install python`), **Rasa** (`pip install rasa==3.0), and **Tensorflow** installed (`pip install tensorflow`)
+2. Make sure you have **Python** (`brew install python`), **Rasa** (`pip install rasa==3.0`), and **Tensorflow** installed (`pip install tensorflow`)
 3. Alternatively, you can also use the requirements folder in the repo to install everything you need.
 4. Navigate (`cd`) to the cloned repository.
 5. You'll need to supply an API key for [WordsAPI](https://rapidapi.com/dpventures/api/wordsapi). Do this by making a config.py file inside the actions folder, then declaring a variable `api_key` inside this file.
